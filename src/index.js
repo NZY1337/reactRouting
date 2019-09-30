@@ -2,11 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Route, Link, BrowserRouter as Router} from 'react-router-dom';
+import {Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
 import App from './Home';
 import Users from './components/Users';
 import Contact from './components/Conctact';
 import Brand from './components/Brand';
+import NotFound from './components/NotFound';
 
 const routing = (
     <Router>
@@ -27,9 +28,12 @@ const routing = (
                 </div>
             </nav>
             
-            <Route exact path='/' component={App}/>
-            <Route path='/users' component={Users}/>
-            <Route path='/contact' component={Contact}/>
+            <Switch>
+                <Route exact path='/' component={App}/>
+                <Route path="/users" component={Users} />
+                <Route path='/contact' component={Contact}/>
+                <Route component={NotFound}/>
+            </Switch>
         </div>
     </Router>
 );
