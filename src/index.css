@@ -7,3 +7,11 @@ body {
 nav img {
   width:60px;
 }
+
+.carousel.carousel-slider {
+  height: 700px!important;
+}
+
+ul:not(.browser-default)>li {
+  height: 64px;
+}
