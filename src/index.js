@@ -30,7 +30,7 @@ const routing = (
             
             <Switch>
                 <Route exact path='/' component={App}/>
-                <Route path="/users" component={Users} />
+                <Route path="/users/:id" component={Users} />
                 <Route path='/contact' component={Contact}/>
                 <Route component={NotFound}/>
             </Switch>
