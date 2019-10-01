@@ -15,3 +15,14 @@ nav img {
 ul:not(.browser-default)>li {
   height: 64px;
 }
+
+li.indicator-item.active {
+  background-color:red!important;
+}
+
+.indicator-item {
+  height: 15px!important;
+  width:15px!important;
+  background-color:white!important;
+  border-radius: 0!important;
+}
