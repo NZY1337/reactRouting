@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CartIcon from '../images/sun.png';
+import CartIcon from '../../images/sun.png'
 
- class Brand extends Component {
+class Brand extends Component {
   render() {
     return (
         <img className="responsive-img" src={CartIcon}/>

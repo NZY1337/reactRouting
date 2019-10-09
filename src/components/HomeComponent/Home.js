@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../../App.css';
 import {Button, Modal, Icon, Carousel} from 'react-materialize';
 import 'materialize-css/dist/js/materialize.min.js';
 
