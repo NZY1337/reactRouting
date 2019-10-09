@@ -26,3 +26,12 @@ li.indicator-item.active {
   background-color:white!important;
   border-radius: 0!important;
 }
+
+.active {
+  background:black;
+  color:white;
+}
+
+.active-2 {
+  background:none;
+}

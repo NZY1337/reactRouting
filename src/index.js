@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Route, Link, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {Route, NavLink, BrowserRouter as Router, Switch} from 'react-router-dom';
 import App from './Home';
 import Users from './components/Users';
 import Contact from './components/Conctact';
@@ -15,14 +15,14 @@ const routing = (
             <nav>
                 <div className="container">
                     <div className="nav-wrapper">
-                        <Link to='/'>
+                        <NavLink exact activeClassName="active-2" to='/'>
                             <Brand />
-                        </Link>
+                        </NavLink>
 
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><Link to='/'>Home</Link>></li>
-                            <li><Link to='/users'>Users</Link>></li>
-                            <li><Link to='/contact'>Contact</Link></li>
+                            <li><NavLink exact activeClassName="active" to='/'>Home</NavLink>></li>
+                            <li><NavLink activeClassName="active" to='/users'>Users</NavLink></li>
+                            <li><NavLink activeClassName="active" to='/contact'>Contact</NavLink></li>
                         </ul>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ const routing = (
             </Switch>
         </div>
     </Router>
-);
+);;
 
 ReactDOM.render(routing, document.getElementById('root'));
   
