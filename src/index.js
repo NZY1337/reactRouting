@@ -8,6 +8,7 @@ import Users from './components/UsersComponent/Users';
 import Contact from './components/ContactComponent/Conctact';
 import Brand from './components/BrandComponent/Brand';
 import NotFound from './components/NotFoundComponent/NotFound';
+import {Dropdown, Icon, Divider, Button} from 'react-materialize';
 
 const routing = (
     <Router>
@@ -32,11 +33,16 @@ const routing = (
                 <Route exact path='/' component={App}/>
                 <Route path="/users/:id" component={Users} />
                 <Route path='/contact' component={Contact}/>
+                <Route path='/asd1' component={App}/>
+                <Route path='/asd2' component={App}/>
+                <Route path='/asd3' component={App}/>
                 <Route component={NotFound}/>
             </Switch>
         </div>
     </Router>
-);;
+);
+
+// we render this component in index html, by wrapping all the content in a div with id of 'root' (index.html)
 
 ReactDOM.render(routing, document.getElementById('root'));
   

@@ -35,3 +35,30 @@ li.indicator-item.active {
 .active-2 {
   background:none;
 }
+
+#cont {
+  margin-bottom:5rem;
+}
+
+.ppl {
+  background:lightblue;
+  color:black;
+  padding:1rem;
+  margin:1rem;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    background:lightgray;
+    margin-top:1rem;
+}
+
+.withoutClass {
+    background: orange;
+    padding:1rem;
+    margin:1rem;
+    border-bottom:5px solid black;
+}
+
+.withoutClass p {margin:0}

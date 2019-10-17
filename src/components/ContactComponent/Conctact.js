@@ -5,7 +5,6 @@ import {Autocomplete} from 'react-materialize';
 class Contact extends React.Component {
     onSubmit = () => {
         this.props.history.push('/');
-        
     }
 
     render() {
@@ -19,14 +18,14 @@ class Contact extends React.Component {
                     <div className="row">
                        <div className="col s5">
                        <form>
-                            <div class="input-field">
-                                <input type="text" id="autocomplete-input" class="autocomplete" />
-                                <label for="autocomplete-input">Name</label>
+                            <div className="input-field">
+                                <input type="text" id="autocomplete-input" className="autocomplete" />
+                                <label htmlFor="autocomplete-input">Name</label>
                             </div>
 
-                            <div class="input-field">
-                                <input type="email" id="autocomplete-input" class="autocomplete" />
-                                <label for="autocomplete-input">Email</label>
+                            <div className="input-field">
+                                <input type="email" id="autocomplete-input" className="autocomplete" />
+                                <label htmlFor="autocomplete-input">Email</label>
                             </div>
 
                             <button className='waves-effect waves-light btn' onClick={this.onSubmit}>Submit</button>
