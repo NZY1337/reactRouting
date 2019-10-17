@@ -6,7 +6,7 @@ class ParentToChildWithClass extends Component {
        
         const showPPl = people.map(ppl =>{ 
             return (
-                <div className="ppl">
+                <div className="ppl" key={ppl.id}>
                     <p>Name: {ppl.name}</p>
                     <p>Age: {ppl.age}</p>
                     <p>Belt: {ppl.belt}</p>

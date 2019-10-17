@@ -4,6 +4,7 @@ import {Button, Modal, Icon, Carousel} from 'react-materialize';
 import 'materialize-css/dist/js/materialize.min.js';
 import ParentToChildWithClass from '../PassingPropsFromParentToChildWIthClass/ParentToChildWithClass';
 import PassingPropsFromParentToChildWIthoutClass from '../PassingPropsFromParentToChildWIthoutClass/ParentToChildWithoutClass';
+import Contact from '../ContactComponent/Contact'
 
 // this is like our homepage
 class Homepage extends Component {
@@ -15,8 +16,27 @@ class Homepage extends Component {
         ],
     }
     
+    addPeople = (persons) => {
+        persons.id = Math.random();
+        const newPPL = [...this.state.people, persons];
+
+        this.setState({
+            people: newPPL
+        })
+    }
+
+    deletePerson = (id) => {
+        const deleteItem = this.state.people.filter(p => {
+            return p.id !== id
+        })
+
+        this.setState({
+            people: deleteItem
+        })
+    }
+
+    
     render() {
-        
         return (
             <div className="container" id="cont">
                 <Carousel options={{fullWidth: true,indicators: true, numVisible:true}}
@@ -36,8 +56,11 @@ class Homepage extends Component {
                     </Modal>
                 </div>
 
-                <PassingPropsFromParentToChildWIthoutClass people={this.state.people} />
-              
+                <PassingPropsFromParentToChildWIthoutClass 
+                    people={this.state.people} 
+                    deletePerson={this.deletePerson}
+                />
+                <Contact addPeople={this.addPeople} />
             </div>
         );
     }
